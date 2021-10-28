@@ -36,7 +36,7 @@ namespace SlideShow
 
         private void loadRandomPicture()
         {
-            var extensions = new string[] { ".png", ".jpg", ".gif" };
+            var extensions = new string[] { ".bmp", ".png", ".jpg", ".jpeg", ".gif" };
             var di = new DirectoryInfo(System.IO.Directory.GetCurrentDirectory());
             var rgFiles = di.GetFiles("*.*").Where(f => extensions.Contains(f.Extension.ToLower())).ToList();
             if (rgFiles.Any())
